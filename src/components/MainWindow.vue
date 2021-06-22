@@ -294,7 +294,6 @@
 <script>
 export default {
     props: ['brews', 'createBrew'],
-
 }
 </script>
 

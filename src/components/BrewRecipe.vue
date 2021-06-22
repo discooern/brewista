@@ -1,9 +1,46 @@
 <template>
-  <div v-if="pageNum == 1">1</div>
-  <div v-if="pageNum == 2">2</div>
-  <div v-if="pageNum == 3">3</div>
-  <div v-if="pageNum == 4">4</div>
-  <div v-if="pageNum == 5">5</div>
+  <div v-if="pageNum == 1">
+      <img src="../assets\wlaberec@2x.png" class="maxwidth: 400px;" />
+      <div class="m-5 p-5 flex flex-row"><h1 class="text-3xl m-2">1</h1><p class="m-2 text-xl"><strong>Planning out your coffee</strong></p></div>
+      <span class="flex flex-col text-l text-left px-10 pb-20">
+      <p class="p-4">To make good coffee you need good ingredients start with high quality beans with ther flavour you want.</p>
+      <p class="p-4">We recommend 60g/l</p>
+      <p class="p-4">The more you brew the coarser you need to grind the coffee</p>
+      </span>
+  </div>
+  <div v-if="pageNum == 2">
+      <img src="../assets\ncl4omsr@2x.png" class="maxwidth: 400px;" />
+      <div class="m-5 p-5 flex flex-row"><h1 class="text-3xl m-2">2</h1><p class="m-2 text-xl"><strong>Measure and grind beans</strong></p></div>
+      <span class="flex flex-col text-l text-left px-10 pb-20">
+      <p class="p-4">Remember that the burrs on a grinder changed over time. You will need to test out some brews to find your perfect setting.</p>
+      <p class="p-4">Normally if the coffee tastes bitter amd dry, grind coarser if weak and water, grind finer. There is usually no need to adjust the coffee amount, simply adjust tand test different grind settings.</p>
+      </span>
+  </div>
+  <div v-if="pageNum == 3">
+         <img src="../assets\d7xp64x6@2x.png" class="maxwidth: 400px;" />
+      <div class="m-5 p-5 flex flex-row"><h1 class="text-3xl m-2">3</h1><p class="m-2 text-xl"><strong>Filter</strong></p></div>
+      <span class="flex flex-col text-l text-left px-10 pb-20">
+      <p class="p-4">Remember that filter stuff Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident similique quae nemo consectetur, reprehenderit eum cumque, eveniet pariatur id nisi? Hic omnis eveniet obcaecati aliquam optio magni quam debitis.</p>
+      <p class="p-4">Normally if the coffee tastes bitter amd dry, grind coarser if weak and water, grind finer. There is usually no need to adjust the coffee amount, simply adjust tand test different grind settings.</p>
+      </span>
+  </div>
+  <div v-if="pageNum == 4">
+        <img src="../assets\538gm3mc@2x.png" class="maxwidth: 400px;" />
+      <div class="m-5 p-5 flex flex-row"><h1 class="text-3xl m-2">4</h1><p class="m-2 text-xl"><strong>Planning out your coffee</strong></p></div>
+      <span class="flex flex-col text-l text-left px-10 pb-20">
+      <p class="p-4">Remember that filter stuff Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident similique quae nemo consectetur, reprehenderit eum cumque, eveniet pariatur id nisi? Hic omnis eveniet obcaecati aliquam optio magni quam debitis.</p>
+      <p class="p-4">We recommend 60g/l</p>
+      <p class="p-4">Normally if the coffee tastes bitter amd dry, grind coarser if weak and water, grind finer. There is usually no need to adjust the coffee amount, simply adjust tand test different grind settings.</p>
+      </span>
+  </div>
+  <div v-if="pageNum == 5">
+      <img src="../assets\538gm3mc@2x.png" class="maxwidth: 400px;" />
+      <div class="m-5 p-5 flex flex-row"><h1 class="text-3xl m-2">5</h1><p class="m-2 text-xl"><strong>Enjoy</strong></p></div>
+      <span class="flex flex-col text-l text-left px-10 pb-20">
+      <p class="p-4">Let your coffeee cool down for 5 minutes for the most flavor.</p>
+      <p class="p-4">if it gets to cold you can heat it back upå in a microwave.</p>
+      </span>
+  </div>
 
   <div class="bg-yellow-200 rounded-3xl h-20 flex py-5 justify-center mx-auto" style="maxwidth: 400px;">
     <a @click="decrease()">
@@ -82,9 +119,7 @@ export default {
     decrease() {
         if (this.pageNum > 1) {
             this.pageNum--;
-      } else {
-          this.pageNum = 5;
-      }
+        }
       return this.pageNum;
     },
     increase() {
@@ -92,7 +127,7 @@ export default {
         if (this.pageNum < 5) {
             this.pageNum++;
       } else {
-          this.pageNum = 1;
+        this.$router.push('/MainWindow'); 
       }
       return this.pageNum;
     },
