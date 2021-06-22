@@ -1,14 +1,15 @@
 <template>
+    <div class="max-w-4xl mx-auto">
     <span class="flex w-12/12">
-      <a href="#">
+      <router-link to="MainWindow">
         <svg class="mx-5 my-10" id="arrowBack" style="width: 40px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
-      </a>
+      </router-link>
       <h1 class="self-center mx-14"><strong>Pick your Coffee</strong></h1>
     </span>
-    <a href="#">
-        <img src="../assets/header-coffeecollective-dark@2x.png">
+    <router-link to="PickMethod">
+        <img class="w-full" src="../assets/header-coffeecollective-dark@2x.png">
         <div class="rounded-b-3xl pb-5 mb-8" style="background-color: #293D3B;">
         <span class="flex flex-col items-start mx-8">
         <h2 class="text-blue-600">KIENI ESPRESSO</h2>
@@ -21,10 +22,10 @@
             <li class="p-8 flex flex-col items-start">"><h3 class="text-white">COUNTRY</h3><p class="text-blue-600">Guatemala</p></li>
         </ul>
         </div>
-    </a>
+    </router-link>
 
-    <a href="#">
-        <img src="../assets/header-coffeecollective@2x.png">
+    <router-link to="PickMethod">
+        <img class="w-full" src="../assets/header-coffeecollective@2x.png">
         <div class="rounded-b-3xl pb-5 mb-8" style="background-color: #C5C4BF;">
         <span class="flex flex-col items-start mx-8">
         <h2 class="text-gray-800">KIENI ESPRESSO</h2>
@@ -37,5 +38,13 @@
             <li class="p-8 flex flex-col items-start"><h3 class="text-gray-500">COUNTRY</h3><p class="text-gray-800">Guatemala</p></li>
         </ul>
         </div>
-    </a>
+    </router-link>
+    </div>
 </template>
+
+<script>
+export default {
+    props: ['createBrew'],
+
+}
+</script>
